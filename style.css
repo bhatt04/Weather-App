@@ -1,0 +1,209 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9ac1e8;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    border-radius: 10px;
+    max-width: 425px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Title Box */
+.title-box {
+    background:linear-gradient(135deg, #5f41e4, #41e4b0);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+}
+
+.weather-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-section .input-wrapper {
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.search-section .input-wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #5f41e4;
+}
+
+.search-section .search-input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 0 40px;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+}
+
+.search-section .search-input:focus {
+    border-color: #5f41e4;
+}
+
+.search-section .location-button {
+    height: 50px;
+    width: 50px;
+    outline: none;
+    background: #fff;
+    color: #5f41e4;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.search-section .location-button:hover {
+    background: #5f41e4;
+    color: #fff;
+    border-color: #5f41e4;
+}
+
+.search-section .location-button span {
+    font-size: 1.3rem;
+}
+
+/* No Results */
+.no-results {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.show-no-results .no-results {
+    display: flex;
+}
+
+.no-results .title {
+    margin: 25px 0 15px;
+}
+
+.no-results .message {
+    font-weight: 500;
+}
+
+body.show-no-results .weather-section {
+    visibility: hidden;
+}
+
+/* Weather Section */
+.weather-section .current-weather {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0 30px;
+}
+
+.current-weather .weather-icon {
+    width: 120px;
+    aspect-ratio: 1;
+}
+
+.current-weather .temperature {
+    font-size: 3rem;
+    margin: 20px 0;
+    display: flex;
+}
+
+.current-weather .temperature span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.current-weather .description {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Hourly Weather */
+.hourly-weather {
+    padding: 16px 20px;
+    border-top: 1px solid #d5ccff;
+}
+
+.hourly-weather .weather-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+}
+
+.hourly-weather:hover .weather-list {
+    scrollbar-color: #bfbfbf transparent;
+}
+
+/* Responsive */
+@media (max-width: 624px) {
+    body {
+        padding: 15px;
+    }
+    .search-section {
+        padding: 20px;
+    }
+    .hourly-weather {
+        padding: 16px 20px;
+    }
+    .hourly-weather .weather-list {
+        gap: 25px;
+    }
+}
