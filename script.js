@@ -33,7 +33,7 @@ const displayHourlyForecast = (hourlyData) =>{
 
         return `<li class="weather-item">
                             <p class="time">${time}</p>
-                            <img src="images/${weatherIcon}.png" class="weather-icon">
+                            <img src="./assets/${weatherIcon}.png" class="weather-icon">
                             <p class="temperature">${temperature}°C</p>
                         </li>`;
     }).join("");
@@ -56,7 +56,7 @@ const getWeatherDetails =async (API_URL) => {
         //update current weather display
         currentWeatherDiv.querySelector(".temperature").innerHTML = `${temperature}<span>°C</span>`;
         currentWeatherDiv.querySelector(".description").innerText = description;
-        currentWeatherDiv.querySelector(".weather-icon").src = `images/${weatherIcon}.png`;
+        currentWeatherDiv.querySelector(".weather-icon").src = `./assets/${weatherIcon}.png`;
 
         const combinedHourlyData = [...data.forecast.forecastday[0].hour, ...data.forecast.forecastday[1].hour];
 
