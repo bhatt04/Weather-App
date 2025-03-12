@@ -1,20 +1,33 @@
-🌍 SkySense
+# 🌍 SkySense  
 
-🚀 Live Demo
-https://checktheskies.netlify.app/
+🚀 **Live Demo**: [Check the Skies](https://checktheskies.netlify.app/)  
 
-📌 Overview
-SkyWise is a simple and intuitive weather app that allows users to search for any city and get real-time weather updates along with an hourly forecast. The app provides a clean, modern UI, a light & dark theme toggle, and responsive design for a seamless experience on all devices.
+## 📌 Overview  
+**SkySense** is a simple and intuitive weather app that allows users to search for any city and get real-time weather updates along with an hourly forecast.  
 
-✨ Features
-✔️ Search for any city to get real-time weather updates
-✔️ Hourly forecast with a smooth horizontal scroll
-✔️ Dynamic weather icons that update based on conditions
-✔️ Light & Dark Mode toggle for a customizable experience
-✔️ Error handling for invalid city searches
-✔️ Fully responsive design
+The app provides:  
+- A **clean, modern UI**  
+- A **light & dark theme toggle**  
+- **Responsive design** for a seamless experience on all devices  
 
-🛠️ Tech Stack
-Frontend: HTML, CSS, JavaScript
-API: WeatherAPI
-Hosting: GitHub Pages / Netlify
+## ✨ Features  
+✔️ **Search** for any city to get real-time weather updates  
+✔️ **Hourly forecast** with a smooth horizontal scroll  
+✔️ **Dynamic weather icons** that update based on conditions  
+✔️ **Light & Dark Mode toggle** for a customizable experience  
+✔️ **Error handling** for invalid city searches  
+✔️ **Fully responsive design** for all screen sizes  
+
+## 🛠️ Tech Stack  
+🔹 **Frontend**: HTML, CSS, JavaScript  
+🔹 **API**: [WeatherAPI](https://www.weatherapi.com/)  
+🔹 **Hosting**: GitHub Pages / Netlify  
+
+---  
+
+### 📖 How to Use  
+1. **Enter a city name** in the search bar.  
+2. Get **real-time weather updates** along with an hourly forecast.  
+3. Use the **Light/Dark mode toggle** for a customized experience.  
+
+💡 **Stay ahead of the weather—Check the skies, dress wise!**  
