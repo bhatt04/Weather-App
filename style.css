@@ -17,7 +17,15 @@ body {
     padding: 20px;
 }
 
-/* Container */
+body.dark-mode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #001c38;
+    min-height: 100vh;
+    padding: 20px;
+}
+
 .container {
     background: #ffffff;
     border-radius: 10px;
@@ -27,8 +35,16 @@ body {
     position: relative;
     overflow: hidden;
 }
+body.dark-mode .container{
+    background: #aabeff ;
+    border-radius: 10px;
+    max-width: 425px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
 
-/* Title Box */
 .title-box {
     background:linear-gradient(135deg, #5f41e4, #41e4b0);
     padding: 20px;
@@ -36,6 +52,14 @@ body {
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border: 3px solid white;
+}
+body.dark-mode .title-box {
+    background:linear-gradient(135deg, #f47709, #e441ab);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.699);
+    border: 3px solid rgb(255, 255, 255);
 }
 
 .weather-heading {
@@ -46,7 +70,6 @@ body {
     letter-spacing: 2px;
 }
 
-/* Search Section */
 .search-section {
     display: flex;
     padding: 20px;
@@ -80,6 +103,21 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.1s ease;
+    background-color: #ffffff;
+}
+body.dark-mode .search-section .search-input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 0 40px;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    background-color: #081366;
+    color: #9ac1e8;
 }
 
 .search-section .search-input:focus {
@@ -90,10 +128,24 @@ body {
     height: 50px;
     width: 50px;
     outline: none;
-    background: #fff;
+    background: #ffffff;
     color: #5f41e4;
     border-radius: 6px;
     border: 1px solid #beb0ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+body.dark-mode .search-section .location-button {
+    height: 50px;
+    width: 50px;
+    outline: none;
+    background: #040e5c;
+    color: #c0b9df;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -106,12 +158,15 @@ body {
     color: #fff;
     border-color: #5f41e4;
 }
-
+body.dark-mode .search-section .location-button:hover {
+    background: rgb(38, 8, 172);
+    color: #fff;
+    border-color: #ffffff;
+}
 .search-section .location-button span {
     font-size: 1.3rem;
 }
 
-/* No Results */
 .no-results {
     position: absolute;
     left: 50%;
@@ -142,7 +197,6 @@ body.show-no-results .weather-section {
     visibility: hidden;
 }
 
-/* Weather Section */
 .weather-section .current-weather {
     display: flex;
     align-items: center;
@@ -171,7 +225,6 @@ body.show-no-results .weather-section {
     font-weight: 500;
 }
 
-/* Hourly Weather */
 .hourly-weather {
     padding: 16px 20px;
     border-top: 1px solid #d5ccff;
@@ -192,7 +245,6 @@ body.show-no-results .weather-section {
     scrollbar-color: #bfbfbf transparent;
 }
 
-/* Responsive */
 @media (max-width: 624px) {
     body {
         padding: 15px;
@@ -207,3 +259,58 @@ body.show-no-results .weather-section {
         gap: 25px;
     }
 }
+
+.theme-switch {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0b89d7;
+    border-radius: 26px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(171, 200, 247);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Change switch background when toggled */
+input:checked + .slider {
+    background-color: #5f0dac;
+    border: 1px solid white;
+}
+
+/* Move circle when toggled */
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* Dark mode styles */
+/* .dark-mode {
+    background-color: #122153;
+    color: #ffffff;
+} */

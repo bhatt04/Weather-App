@@ -94,3 +94,24 @@ locationButton.addEventListener("click" , ()=>{
         alert("Location access denied. Please enable permissions to use this feature.");
     });
 })
+
+const toggleSwitch = document.getElementById("theme-toggle");
+
+// Check local storage for theme preference
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleSwitch.checked = true;
+}
+
+// Toggle theme and store preference
+toggleSwitch.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
+
+
